@@ -1,0 +1,47 @@
+ /articles 
+
+"Candidate is jerk, alleges rival" ----- 338647 views
+"Bears love berries, alleges bear" ----- 253801 views
+"Bad things gone, say good people" ----- 170098 views
+
+**************************************************************
+ /authors
+
+"Ursula La Multa" ----- 507594 views
+"Rudolf von Treppenwitz" ----- 423457 views
+"Anonymous Contributor" ----- 170098 views
+"Markoff Chaney" ----- 84557 views
+**************************************************************
+ /errors
+
+2016-07-31 --- 0.72 %.errors
+2016-07-30 --- 0.72 %.errors
+2016-07-29 --- 0.7 %.errors
+2016-07-28 --- 0.72 %.errors
+2016-07-27 --- 0.67 %.errors
+2016-07-26 --- 0.73 %.errors
+2016-07-25 --- 0.72 %.errors
+2016-07-24 --- 0.78 %.errors
+2016-07-23 --- 0.68 %.errors
+2016-07-22 --- 0.74 %.errors
+2016-07-21 --- 0.76 %.errors
+2016-07-20 --- 0.7 %.errors
+2016-07-19 --- 0.78 %.errors
+2016-07-18 --- 0.67 %.errors
+2016-07-17 --- 2.26 %.errors
+2016-07-16 --- 0.69 %.errors
+2016-07-15 --- 0.74 %.errors
+2016-07-14 --- 0.69 %.errors
+2016-07-13 --- 0.69 %.errors
+2016-07-12 --- 0.68 %.errors
+2016-07-11 --- 0.74 %.errors
+2016-07-10 --- 0.68 %.errors
+2016-07-09 --- 0.74 %.errors
+2016-07-08 --- 0.76 %.errors
+2016-07-07 --- 0.66 %.errors
+2016-07-06 --- 0.77 %.errors
+2016-07-05 --- 0.77 %.errors
+2016-07-04 --- 0.69 %.errors
+2016-07-03 --- 0.73 %.errors
+2016-07-02 --- 0.7 %.errors
+2016-07-01 --- 0.71 %.errors
