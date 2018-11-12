@@ -1,8 +1,11 @@
+#!/usr/bin/env python2
 # Database code for the DB reportingTool
 
 import psycopg2
+import datetime
 
 DBNAME = "news"
+
 
 def get_most_three_popular_articles():
     """Return the most popular three articles of all time."""
@@ -10,11 +13,15 @@ def get_most_three_popular_articles():
     c = db.cursor()
     c.execute("""
         select title, views from
-        (select substr(path, 10), count(*) as views from log where path !='/' group by path)
-        as hits, articles where substr = slug order by views desc limit 3;
+        (select substr(path, 10), count(*) as views from log
+        where path !='/'
+        group by path)
+        as hits, articles where substr = slug
+        order by views desc limit 3;
         """)
     return c.fetchall()
     db.close()
+
 
 def get_most_popular_authors():
     """Return the most popular article authors of all time"""
@@ -33,17 +40,29 @@ def get_most_popular_authors():
     authors = c.fetchall()
     db.close()
     return authors
-def get_error_days():
+
+
+def e_d():
     """Return the most popular article authors of all time"""
     db = psycopg2.connect(database=DBNAME)
     c = db.cursor()
-    c.execute("""select requests.date, errors.http_404 * 100 / requests.http_requests::float from
-                (select date_trunc('day', time) as date, count(*) as http_requests from log group by date) as requests,
-                (select date_trunc('day', time) as date, count(*) as http_404 from log where status = '404 NOT FOUND' group by date) as errors
-                where requests.date = errors.date 
+    c.execute("""select requests.date,
+                errors.http_404 * 100 / requests.http_requests::float
+                from
+                (select date_trunc('day', time) as date,
+                count(*) as http_requests from log group by date) as requests,
+                (select date_trunc('day', time) as date,
+                count(*) as http_404 from log
+                where status = '404 NOT FOUND' group by date) as errors
+                where requests.date = errors.date
                 and errors.http_404 * 100 / requests.http_requests::float > 0.1
                 order by requests.date desc;""")
     errorLog = c.fetchall()
     db.close()
     return errorLog
 
+
+def d_f(date):
+    d = str(date).split(' ', 1)[0]
+    fd = datetime.datetime.strptime(d, '%Y-%m-%d').strftime('%b %d, %Y')
+    return fd
