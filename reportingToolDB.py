@@ -55,7 +55,7 @@ def e_d():
                 count(*) as http_404 from log
                 where status = '404 NOT FOUND' group by date) as errors
                 where requests.date = errors.date
-                and errors.http_404 * 100 / requests.http_requests::float > 0.1
+                and errors.http_404 * 100 / requests.http_requests::float > 1
                 order by requests.date desc;""")
     errorLog = c.fetchall()
     db.close()
